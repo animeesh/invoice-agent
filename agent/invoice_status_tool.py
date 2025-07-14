@@ -23,6 +23,7 @@ llm=ChatOpenAI(
     temperature=0.0,
     openai_api_key=api_key)
 
+@tool(show_result=True, stop_after_tool_call=True)
 def get_invoice_status(invoice_id: str) -> str:
     """
     Get the current status of a given invoice by its ID.
